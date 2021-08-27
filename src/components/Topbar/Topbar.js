@@ -3,9 +3,10 @@ import './Topbar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-const Topbar = () => {
+const Topbar = ({menuOpen, setMenuOpen}) => {
+
     return (
-        <div className='topbar'>
+        <div className={'topbar ' + (menuOpen && 'active')}>
             <div className="wrapper">
                 <div className="left">
                     <a href="#intro" className="logo">ROBIN.</a>
@@ -15,13 +16,13 @@ const Topbar = () => {
                     </div>
 
                     <div className="itemContainer">
-                        <FontAwesomeIcon className="icon" icon={faEnvelope} />
+                       <FontAwesomeIcon className="icon" icon={faEnvelope} />
                         <snap>mdrobin420hossain.com</snap>
                     </div>
 
                 </div>
                 <div className="right">
-                    <div className="hamburger">
+                    <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
                         <span className="line1"></span>
                         <span className="line1"></span>
                         <span className="line1"></span>

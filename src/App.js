@@ -4,12 +4,19 @@ import Testimonials from './components/Testimonials/Testimonials';
 import Intro from './components/Intro/Intro';
 import Portfolio from './components/Portfolio/Portfolio';
 import './App.scss';
+import { useState } from 'react';
+import Menu from './components/Menu/Menu';
+import Ganja from './components/Ganja/Ganja';
 
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
+    
     <div className="app">
-     <Topbar />
+      
+     <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+     <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
      <div className="sections">
        <Intro />
        <Portfolio />

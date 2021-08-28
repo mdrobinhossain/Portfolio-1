@@ -1,3 +1,4 @@
+import React from "react";
 import Topbar from './components/Topbar/Topbar';
 import Works from './components/Works/Works';
 import Testimonials from './components/Testimonials/Testimonials';
@@ -6,7 +7,6 @@ import Portfolio from './components/Portfolio/Portfolio';
 import './App.scss';
 import { useState } from 'react';
 import Menu from './components/Menu/Menu';
-import Ganja from './components/Ganja/Ganja';
 
 
 function App() {
